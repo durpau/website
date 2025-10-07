@@ -1,5 +1,4 @@
-
-:root{
+:root {
   --clr-bg: #F8FAFC;
   --clr-text: #0B1A2B;
   --clr-accent: #2E86AB; /* blue */
@@ -8,51 +7,224 @@
   --container-w: 1000px;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:Inter, "Helvetica Neue", Arial, sans-serif;background:var(--clr-bg);color:var(--clr-text)}
-a{color:var(--clr-accent-2);text-decoration:none}
-a:hover{text-decoration:underline}
+/* Global reset and base styles */
+* {
+  box-sizing: border-box;
+}
 
-/* Header / Nav */
-header{background:var(--clr-accent);color:#fff}
-.header-inner{max-width:var(--container-w);margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.site-title{font-weight:700;letter-spacing:0.2px}
-.site-sub{font-size:0.9rem;opacity:0.95}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+a {
+  color: var(--clr-accent-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ─────────────── HEADER / NAVIGATION ─────────────── */
+
+header {
+  background: #ffffff; /* light background */
+  color: var(--clr-text);
+  border-bottom: 1px solid #E2E8F0; /* subtle separator line */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 1.2rem;
+  color: var(--clr-text);
+}
+
+.site-sub {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: var(--clr-muted);
+}
 
 /* Navigation */
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px}
-nav a{color:#fff;padding:8px 12px;border-radius:6px;display:inline-block}
-nav a:hover{background:rgba(255,255,255,0.08)}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+}
 
-/* Container */
-.container{max-width:var(--container-w);margin:0 auto;padding:28px 20px}
+nav a {
+  color: var(--clr-text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
 
-/* ABOUT layout */
-.about-hero{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center}
-.profile-photo{width:220px;height:220px;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(11,26,43,0.08);border:6px solid white}
-.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.bio h1{margin:0 0 6px;font-size:1.6rem}
-.bio p{margin:0 0 12px;color:var(--clr-muted);line-height:1.5}
+nav a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
 
-/* small card */
-.card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(11,26,43,0.04)}
+/* ─────────────── CONTAINER ─────────────── */
 
-/* CV page */
-.cv-link{display:inline-block;padding:10px 16px;background:var(--clr-accent-2);color:white;border-radius:8px;font-weight:600}
+.container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 28px 20px;
+}
 
-/* Research */
-.publications{display:flex;flex-direction:column;gap:14px;margin-top:6px}
-.publication{background:white;border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(11,26,43,0.03)}
-.pub-meta{color:var(--clr-muted);font-size:0.95rem;margin-bottom:8px}
-.pub-actions a{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:8px;background:var(--clr-accent);color:white;font-size:0.9rem}
+/* ─────────────── ABOUT SECTION ─────────────── */
 
-/* Footer */
-footer{background:var(--clr-accent);color:white;padding:18px 0;margin-top:36px;text-align:center}
+.about-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: center;
+}
 
-/* Responsive */
-@media (max-width:800px){
-  .about-hero{grid-template-columns:1fr;grid-template-rows:auto;gap:12px}
-  .profile-photo{width:160px;height:160px;margin:0 auto;border-radius:50%}
-  .header-inner{flex-direction:column;align-items:flex-start;gap:10px}
-  nav ul{flex-wrap:wrap}
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(11,26,43,0.08);
+  border: 6px solid white;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bio h1 {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.bio p {
+  margin: 0 0 12px;
+  color: var(--clr-muted);
+  line-height: 1.5;
+}
+
+/* ─────────────── CARD STYLE ─────────────── */
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(11,26,43,0.04);
+}
+
+/* ─────────────── CV PAGE ─────────────── */
+
+.cv-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--clr-accent-2);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.cv-link:hover {
+  background: #e35a5a;
+}
+
+/* ─────────────── RESEARCH PAGE ─────────────── */
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.publication {
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(11,26,43,0.03);
+}
+
+.pub-meta {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.pub-actions a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--clr-accent);
+  color: white;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.pub-actions a:hover {
+  background: #256d8a;
+}
+
+/* ─────────────── FOOTER ─────────────── */
+
+footer {
+  background: #ffffff;
+  color: var(--clr-text);
+  padding: 18px 0;
+  margin-top: 36px;
+  text-align: center;
+  border-top: 1px solid #E2E8F0;
+}
+
+/* ─────────────── RESPONSIVE ─────────────── */
+
+@media (max-width: 800px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
 }
