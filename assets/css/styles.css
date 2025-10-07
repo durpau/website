@@ -32,8 +32,9 @@ a:hover {
 /* ─────────────── HEADER / NAVIGATION ─────────────── */
 
 header {
-  background: var(--clr-accent); /* blue header */
-  color: #fff;
+  background: #ffffff; /* light background */
+  color: var(--clr-text);
+  border-bottom: 1px solid #E2E8F0; /* subtle separator line */
   position: sticky;
   top: 0;
   z-index: 10;
@@ -45,7 +46,7 @@ header {
   padding: 18px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* title on left, nav on right */
+  justify-content: space-between;
   gap: 12px;
 }
 
@@ -53,13 +54,13 @@ header {
   font-weight: 700;
   letter-spacing: 0.2px;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--clr-text);
 }
 
 .site-sub {
   font-size: 0.9rem;
   opacity: 0.9;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--clr-muted);
 }
 
 /* Navigation */
@@ -68,19 +69,20 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 14px;
 }
 
 nav a {
-  color: #fff;
-  font-weight: 500;
+  color: var(--clr-text);
   padding: 8px 12px;
   border-radius: 6px;
-  transition: background 0.2s ease;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* ─────────────── CONTAINER ─────────────── */
@@ -192,11 +194,12 @@ nav a:hover {
 /* ─────────────── FOOTER ─────────────── */
 
 footer {
-  background: var(--clr-accent);
-  color: white;
+  background: #ffffff;
+  color: var(--clr-text);
   padding: 18px 0;
   margin-top: 36px;
   text-align: center;
+  border-top: 1px solid #E2E8F0;
 }
 
 /* ─────────────── RESPONSIVE ─────────────── */
