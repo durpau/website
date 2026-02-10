@@ -6,6 +6,43 @@
   <title>Research — Pau Durá Díez</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
+
+  <!-- Minimal styles for dropdown -->
+  <style>
+    .paper {
+      margin-bottom: 1rem;
+    }
+
+    .paper-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow {
+      transition: transform 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .arrow.open {
+      transform: rotate(90deg);
+    }
+
+    .abstract {
+      display: none;
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .abstract.open {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <!-- Header placeholder -->
@@ -15,38 +52,83 @@
     <section class="research-section card">
       <h1>Research</h1>
       <ul>
-        <li>
-          The Macroeconomic Effects of Defence Expenditure: Evidence from Spain —
-          Co-authored with Mario Alloza, Rubén Dominguez and Iacopo Varotto (Working Paper)
-          <a
-            href="https://www.dropbox.com/scl/fi/icjsf68ahibn2m04gwesi/WP_def_multipliers.pdf?rlkey=mp4phvoezroze9w7ziuyplpme&e=1&st=0bcws2tu&dl=0"
-            target="_blank"
-            class="pdf-link"
-          >[PDF]</a>
+
+        <li class="paper">
+          <div class="paper-header">
+            <span class="arrow">▶</span>
+            <span>
+              The Macroeconomic Effects of Defence Expenditure: Evidence from Spain —
+              Co-authored with Mario Alloza, Rubén Dominguez and Iacopo Varotto (Working Paper)
+              <a
+                href="https://www.dropbox.com/scl/fi/icjsf68ahibn2m04gwesi/WP_def_multipliers.pdf?rlkey=mp4phvoezroze9w7ziuyplpme&e=1&st=0bcws2tu&dl=0"
+                target="_blank"
+                class="pdf-link"
+              >[PDF]</a>
+            </span>
+          </div>
+          <div class="abstract">
+            This paper studies the macroeconomic effects of defence expenditure in Spain using
+            narrative and econometric identification strategies. We estimate fiscal multipliers
+            and assess heterogeneity across business cycle phases and financing conditions.
+          </div>
         </li>
 
-        <li>
-          The Economic Impact of the European Single Market —
-          Co-authored with Paolo Pasimeni (Single Market Economic Papers, DG GROW)
-          <a
-            href="https://single-market-economy.ec.europa.eu/publications/economic-impact-european-single-market_en"
-            target="_blank"
-            class="pdf-link"
-          >[PDF]</a>
+        <li class="paper">
+          <div class="paper-header">
+            <span class="arrow">▶</span>
+            <span>
+              The Economic Impact of the European Single Market —
+              Co-authored with Paolo Pasimeni (Single Market Economic Papers, DG GROW)
+              <a
+                href="https://single-market-economy.ec.europa.eu/publications/economic-impact-european-single-market_en"
+                target="_blank"
+                class="pdf-link"
+              >[PDF]</a>
+            </span>
+          </div>
+          <div class="abstract">
+            This report quantifies the economic gains from the European Single Market, focusing
+            on trade, productivity, and investment effects across member states and sectors.
+          </div>
         </li>
 
-        <li>
-          EU-China FDI: recent trends and implications on EU exposure —
-          Co-authored with Frank Vandermeeren (Single Market Economic Papers, DG GROW)
-          <a
-            href="https://single-market-economy.ec.europa.eu/publications/eu-china-fdi-recent-trends-and-implications-eu-exposure_en"
-            target="_blank"
-            class="pdf-link"
-          >[PDF]</a>
+        <li class="paper">
+          <div class="paper-header">
+            <span class="arrow">▶</span>
+            <span>
+              EU-China FDI: recent trends and implications on EU exposure —
+              Co-authored with Frank Vandermeeren (Single Market Economic Papers, DG GROW)
+              <a
+                href="https://single-market-economy.ec.europa.eu/publications/eu-china-fdi-recent-trends-and-implications-eu-exposure_en"
+                target="_blank"
+                class="pdf-link"
+              >[PDF]</a>
+            </span>
+          </div>
+          <div class="abstract">
+            This paper documents recent trends in EU–China foreign direct investment and
+            discusses implications for EU strategic dependencies, sectoral exposure, and
+            policy responses.
+          </div>
         </li>
+
       </ul>
     </section>
   </main>
+
+  <!-- Minimal JS for toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".paper-header").forEach(header => {
+        header.addEventListener("click", () => {
+          const abstract = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          abstract.classList.toggle("open");
+          arrow.classList.toggle("open");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
