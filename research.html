@@ -7,11 +7,8 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
 
-  <!-- Minimal styles for dropdown -->
   <style>
-    .paper {
-      margin-bottom: 1rem;
-    }
+    .paper { margin-bottom: 1rem; }
 
     .paper-header {
       display: flex;
@@ -42,22 +39,48 @@
     .abstract.open {
       display: block;
     }
+
+    h2.category {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
+
 <body>
-  <!-- Header placeholder -->
   <div id="header-placeholder"></div>
 
   <main class="container">
     <section class="research-section card">
       <h1>Research</h1>
+
+      <!-- WORK IN PROGRESS -->
+      <h2 class="category">Work in Progress</h2>
       <ul>
 
         <li class="paper">
           <div class="paper-header">
             <span class="arrow">▶</span>
             <span>
-              <b>The Macroeconomic Effects of Defence Expenditure: Evidence from Spain </b> —
+              <b>Beyond Goods: The Euro’s Heterogeneous Impact on Cross-Border Services Trade</b> —
+              Co-authored with Silviano Esteve-Pérez and Salvador Gil-Pareja
+            </span>
+          </div>
+          <div class="abstract">
+            This paper estimates the effect of Economic and Monetary Union (EMU) membership on bilateral services trade using state-of-the-art staggered difference-in-differences methods within a structural gravity framework. We exploit the newly available IMF Bilateral Trade in Services (BiTS) database and allow for treatment heterogeneity at the cohort-year level. In our preferred specification, euro adoption increases bilateral services trade by 36\%. Moreover, we uncover substantial heterogeneity across cohorts and over time.          </div>
+        </li>
+
+      </ul>
+
+      <!-- WORKING PAPERS -->
+      <h2 class="category">Working Papers</h2>
+      <ul>
+
+        <li class="paper">
+          <div class="paper-header">
+            <span class="arrow">▶</span>
+            <span>
+              <b>The Macroeconomic Effects of Defence Expenditure: Evidence from Spain</b> —
               Co-authored with Mario Alloza, Rubén Dominguez and Iacopo Varotto (Working Paper)
               <a
                 href="https://www.dropbox.com/scl/fi/icjsf68ahibn2m04gwesi/WP_def_multipliers.pdf?rlkey=mp4phvoezroze9w7ziuyplpme&e=1&st=0bcws2tu&dl=0"
@@ -70,6 +93,12 @@
             We estimate the macroeconomic effects of defence expenditure using a novel dataset covering the universe of defence procurement contracts in Spain over 30 years. Our defence procurement data overcomes identification challenges posed by implementation lags inherent in traditional government spending, as contracts are awarded years before production begins and spending is recorded in government national accounts only upon delivery. Using local projections, we find that GDP effects take time to materialise, become sizeable, but remain transitory. That is, while defence investment has relevant economic consequences, these are bound to occur in the medium run insofar as the spending process is hindered by implementation lags. A DSGE model calibrated to our empirical setting yields two main findings. First, reducing implementation lags to US levels would meaningfully frontload macroeconomic effects. Second, defence spending delivers more transient and smaller long-run effects than general public investment projects.
           </div>
         </li>
+
+      </ul>
+
+      <!-- PUBLICATIONS -->
+      <h2 class="category">Publications</h2>
+      <ul>
 
         <li class="paper">
           <div class="paper-header">
@@ -85,19 +114,7 @@
             </span>
           </div>
           <div class="abstract">
-            What is the economic impact of having established a common market in the European Union
-(EU)? This paper aims to shed light on this fundamental question. It presents the main trends
-in integration, reviews the existing literature, and summarises the various estimates of its
-impacts as well as the potential gains of further integration. Economies within the Single Market
-are more integrated than those outside it, and declining trade costs suggest increased fluidity
-and reduced frictions within the Single Market, reinforcing its role in fostering integration. The
-economic literature based on gravity models points to positive and sizeable impacts brought
-about by the Single Market, albeit those are heterogeneous across estimation techniques and
-countries. Overall, we can reasonably say that EU’s GDP is at least three to four percentage
-points higher than it would have been without the Single Market, and this is likely to be an
-underestimation of the gains, because they are based on “static” effects only. General
-equilibrium models that aim to capture also dynamic effects suggest that the gains may well
-be twice as large. Finally, the paper discusses the potential for further integration
+            What is the economic impact of having established a common market in the European Union (EU)? This paper aims to shed light on this fundamental question. It presents the main trends in integration, reviews the existing literature, and summarises the various estimates of its impacts as well as the potential gains of further integration. Economies within the Single Market are more integrated than those outside it, and declining trade costs suggest increased fluidity and reduced frictions within the Single Market, reinforcing its role in fostering integration. The economic literature based on gravity models points to positive and sizeable impacts brought about by the Single Market, albeit those are heterogeneous across estimation techniques and countries. Overall, we can reasonably say that EU’s GDP is at least three to four percentage points higher than it would have been without the Single Market, and this is likely to be an underestimation of the gains, because they are based on “static” effects only. General equilibrium models that aim to capture also dynamic effects suggest that the gains may well be twice as large. Finally, the paper discusses the potential for further integration.
           </div>
         </li>
 
@@ -123,7 +140,6 @@ be twice as large. Finally, the paper discusses the potential for further integr
     </section>
   </main>
 
-  <!-- Minimal JS for toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".paper-header").forEach(header => {
