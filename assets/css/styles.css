@@ -133,9 +133,15 @@ nav a:hover {
 
 .card {
   background: white;
-  border-radius: 10px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(11,26,43,0.04);
+  border-radius: 18px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 1px 3px rgba(0,0,0,.05),
+    0 12px 32px rgba(0,0,0,.04);
 }
 
 /* ─────────────── CV PAGE ─────────────── */
@@ -228,57 +234,63 @@ footer {
     flex-wrap: wrap;
   }
 }
-
-/* Timeline */
+/* ─────────────── TIMELINE ─────────────── */
 
 .timeline {
   position: relative;
-  margin-top: 1.5rem;
-  padding-left: 1rem;
+  margin-top: 2rem;
+  padding-left: 2rem;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 130px;
+  left: 10px;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #d1d5db;
+  background: linear-gradient(
+    to bottom,
+    #2563eb,
+    #60a5fa
+  );
 }
 
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 2rem;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 123px;
-  top: 0.45rem;
-  width: 12px;
-  height: 12px;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: var(--clr-accent);
+  background: #2563eb;
   border: 3px solid white;
-  box-shadow: 0 0 0 2px #d1d5db;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .timeline-date {
-  text-align: right;
   font-weight: 600;
-  color: var(--clr-muted);
-  font-size: 0.9rem;
+  color: #2563eb;
 }
 
-.timeline-content h3 {
-  margin: 0;
+.timeline-content {
+  background: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
 }
 
-.timeline-content p {
-  margin: 0.3rem 0;
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
